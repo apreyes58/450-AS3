@@ -11,7 +11,7 @@ class Child1 extends Component {
         this.renderChart();
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate() {
         this.renderChart();
     }
 

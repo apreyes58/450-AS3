@@ -12,14 +12,14 @@ class Child2 extends Component {
         this.renderChart();
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate() {
         this.renderChart();
     }
 
     renderChart() {
         const { data2 } = this.props;
 
-        const days = ["Sun", "Sat", "Fri", "Thur"];
+        const days = ["Sun", "Sat", "Thur", "Fri"];
         const averageTips = days.map(day => {
             const filteredData = data2.filter(d => d.day === day);
             const totalTips = filteredData.reduce((sum, d) => sum + d.tip, 0);
